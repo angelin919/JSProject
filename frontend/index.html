@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <header id="header" class="header flex">
+            <logo class="logo"><img width="50px" src="./img/logo.svg" alt=""></logo>
+            <div id="search" class="search">
+                <input id="search_aria" type="text" class="search_aria" placeholder="Введите запрос">
+            </div>
+        </header>
+        <section id="sc" class="sc">
+            <h1>Клиенты</h1>
+            <div class="table_conteiner">
+                <table id="table">
+                    <thead>
+                        <tr id="tr_thead" class="tr_thead">
+                            <th data-column="id">ID<img src="./img/arrow_downward.svg"></th>
+                            <th data-column="surname">Фамилия Имя Отчество<img src="./img/arrow_downward.svg"></th>
+                            <th data-column="createdAt" width="130px">Дата и время создания<img
+                                    src="./img/arrow_downward.svg"></th>
+                            <th data-column="updatedAt" width="130px">Последние изменеия<img
+                                    src="./img/arrow_downward.svg"></th>
+                            <th class="th_contact_client">Контакты</th>
+                            <th>Действия</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody" class="tbody">
+                        <!-- <tr>
+                      <td>1</td>
+                      <td>Игунова Ангелина Александровн</td>
+                      <td>12.12.2012</td>
+                      <td>12.12.2012</td>
+                      <td id="phone"></td>
+                      <td><input id="btCange" type="submit" value="Изменить"></td>
+                      <td><input id="btCreat" type="submit" value="Удалить"></td>
+                    </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center;">
+                <button id="buttonNC" class="buttonNC">Добавить клиента</button>
+            </div>
+
+            <div id="newClientBlock" class="newClientBlock">
+                <form id="newClient" class="newClient">
+                    <span class="close_img"><img src="./img/close.png"></span>
+                    <h2 id="titleClient" class="titleClient">Новый клиент</h2>
+                    <label for="surname">Фамилия</label>
+                    <input type="text" id="surname" name="surname">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name">
+                    <label for="lastName">Отчество</label>
+                    <input type="text" id="lastName">
+
+                </form>
+                <form id="formAddContact" class="formAddContact">
+                    <!-- 
+                    <div style="margin-top: 20px;">
+                        <button id="delContact" class="bt btdelContact">Удалить клиента</button>
+                    </div> -->
+
+                </form>
+
+                <div class="bt_block">
+                    <input id="addContact" type="submit" value="Добавить контакт" class="bt btAddContact">
+                    <div class="btSave_block">
+                        <input id="save" type="submit" value="Сохранить" class="bt btSave">
+                        <img class="preloader_svg" src="./img/load.svg">
+                    </div>
+                    <input id="cancel" type="submit" value="Отмена" class="bt btCancel">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script defer type="module" src="./js.js"></script>
+
+</body>
+
+</html>
